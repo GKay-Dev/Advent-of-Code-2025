@@ -1,9 +1,14 @@
+import sys
 from pathlib import Path
 
-input_path = Path(__file__).parent / "input.txt"
+# Add parent directory to path
+sys.path.append(str(Path(__file__).parent.parent))
 
-with open(input_path, "r") as file:
-    rotation = [line.strip() for line in file]
+from aoc_utils import get_input
+
+# Get input (fetches from web if not cached, or use save_to_file=False to never save)
+input = get_input(day=1, force_fetch=False)
+rotation = input.split('\n')
 
 
 # Part One

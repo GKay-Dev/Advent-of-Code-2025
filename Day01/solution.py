@@ -1,9 +1,14 @@
+import sys
 from pathlib import Path
 
-input_path = Path(__file__).parent / "input.txt"
+# Add parent directory to path
+sys.path.append(str(Path(__file__).parent.parent))
 
-with open(input_path, "r") as file:
-    rotation = [line.strip() for line in file]
+from aoc_utils import get_input
+
+# Get input (fetches from web if not cached, or use `save_to_file=False` to never save)
+input = get_input(day=1, force_fetch=False)
+rotation = input.split('\n')
 
 
 # Part One
@@ -12,7 +17,6 @@ ctr = 0
 
 for r in rotation:
     direction, distance = r[0], int(r[1:])
-
     ptr = (ptr - distance if direction == 'L' else ptr + distance) % 100
     
     if ptr == 0:
@@ -38,6 +42,5 @@ for r in rotation:
     else:
         ctr += (ptr + distance) // 100
         ptr = (ptr + distance) % 100
-        
 
 print("Using password method 0x434C49434B, Password to open the door:", ctr)
