@@ -154,7 +154,7 @@ run_all_days(no_of_days)  # Execute solutions for all days up to no_of_days
 |:-------------------------------------------- | :----: | :----: |
 | [Day 1](Day01/Day01_Historian_Hysteria.md)   | ✅     | ✅     |
 | [Day 2](Day02/Day02_Red_Nosed_Reports.md)    | ✅     | ✅     |
-| Day 3                                        | ❌     | ❌     |
+| [Day 3](Day03/Day03_Lobby.md)                | ✅     | ✅     |
 | Day 4                                        | ❌     | ❌     |
 | Day 5                                        | ❌     | ❌     |
 | Day 6                                        | ❌     | ❌     |
