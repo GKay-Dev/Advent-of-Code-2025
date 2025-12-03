@@ -8,47 +8,32 @@ from timer_utils import timer, time_both_parts
 from aoc_utils import get_input
 
 
-# Part One
+# Part One: Count exact landings on position 0 using walrus operator
 @timer(name="Part One")
 def Part_One(rotation: list[str]) -> None:
-    ptr = 50  # Starting position on circular track (0-99)
-    ctr = 0   # Counter for exact zero landings
-
-    for r in rotation:
-        direction, distance = r[0], int(r[1:])
-        # Move counter-clockwise (L) or clockwise (R), wrapping around with modulo
-        ptr = (ptr - distance if direction == 'L' else ptr + distance) % 100
-        
-        if ptr == 0:
-            ctr += 1
+    ptr = 50
+    # One-liner: update ptr and count zeros in single expression using walrus operator
+    ctr = sum(1 for r in rotation if (ptr := (ptr - int(r[1:]) if r[0] == 'L' else ptr + int(r[1:])) % 100) == 0)
 
     print("Part One - Actual Password to open the door:", ctr)
 
 
-# Part Two
+# Part Two: Count all zero crossings using boolean arithmetic
 @timer(name="Part Two")
 def Part_Two(rotation: list[str]) -> None:
-    ptr = 50  # Starting position on circular track (0-99)
-    ctr = 0   # Counter for all zero crossings
+    ptr = 50
+    ctr = 0
 
     for r in rotation:
         direction, distance = r[0], int(r[1:])
-
+        
         if direction == 'L':
-            # Adjust if starting at 0 to avoid double-counting
-            if ptr == 0:
-                ctr -= 1
-            # Count crossings using integer division (how many complete wraps)
-            ctr += abs((ptr - distance) // 100)
-            # Update position with modulo
+            # Boolean expressions convert to 0/1 for arithmetic
+            ctr += abs((ptr - distance) // 100) - (ptr == 0)
             ptr = (ptr - distance) % 100
-            # Count if ending at 0
-            if ptr == 0:
-                ctr += 1
+            ctr += (ptr == 0)
         else:
-            # Count crossings during movement
             ctr += (ptr + distance) // 100
-            # Update position with modulo
             ptr = (ptr + distance) % 100
 
     print("Part Two - Using password method 0x434C49434B, Password to open the door:", ctr)
@@ -58,9 +43,9 @@ if __name__ == "__main__":
     # Fetch input from AOC website (cached after first run, or use `save_to_file=False` to never save)
     input_data = get_input(day=1, force_fetch=False)
     rotation = input_data.split('\n')
-    
+
     print("-"*50)
-    print("*** Day 1 - Secret Entrance ***")
+    print("*** Day 1 - Secret Entrance [AI Version] ***")
     print("-"*50, "\n")
 
     # Option 1: Time individually

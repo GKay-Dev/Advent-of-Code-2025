@@ -16,7 +16,7 @@
     - Adjust the first half of `range_start` upward if it's less than second half
     - Adjust the first half of `range_end` downward if it's greater than second half
     - Sum all numbers formed by repeating each base value twice: `base * 2` → `basebase`
-    - **Optimization**:
+    - **AI-based Optimization**:
         - Use mathematical formula: `repeated_number = base * (10^half_len + 1)`
         - Example: For 4-digit number `1212 = 12 * 101 = 12 * (10^2 + 1)`
         - Calculate base range using ceiling/floor division instead of string manipulation
@@ -35,9 +35,9 @@
         - Generate all possible base patterns (from `10^(block-1)` to `10^block - 1`)
         - Repeat each base the required number of times
         - Check if resulting number falls within the range
-        - Add to sum if valid and not already counted
+        - Add to sum if valid and not alrOptimizationeady counted
     - Early exit when repeated number exceeds upper bound
-    - **Optimization**:
+    - **AI-based Optimization**:
         - Pre-calculate multiplier using mathematical formula instead of string repetition
         - Formula: `multiplier = sum(10^(block*i) for i in range(reps))`
         - Example: For block=2, reps=3: `121212 = 12 * 10101 = 12 * (10^4 + 10^2 + 1)`
@@ -45,3 +45,7 @@
         - Convert repeated number using multiplication: `repeated_num = base * multiplier`
         - Keep set for duplicate tracking (necessary for correctness)
         - Time complexity: O(d * b * n) where d is digit lengths, b is block sizes, n is bases per block
+
+## Solutions
+- [`solution.py`](solution.py) - My Solution (python file)
+- [`solution_ai.py`](solution_ai.py) - Vibe coded using AI to refactor & optimize my solution (Sometimes not so optimized)

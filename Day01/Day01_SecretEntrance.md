@@ -14,7 +14,7 @@
     - Use modulo operation to wrap around the circular track.
     - Count how many times the pointer lands exactly on position 0.
     - Implemented using a simple loop with modulo arithmetic for efficiency.
-    - **Optimized implementation**: Uses walrus operator (`:=`) in a generator expression for one-liner solution
+    - **AI-based Optimized implementation**: Uses walrus operator (`:=`) in a generator expression for one-liner solution
     - Time complexity: O(n) where n is the number of instructions
 
 - **Part Two**:
@@ -28,4 +28,8 @@
         - Count crossings using integer division: `(ptr + distance) // 100`
         - Update pointer with modulo
     - This tracks all zero crossings throughout the journey, including multiple wraps around the track.
-    - **Optimization**: Boolean expressions (`ptr == 0`) automatically convert to 1 (True) or 0 (False) for cleaner arithmetic
+    - **AI-based Optimization**: Boolean expressions (`ptr == 0`) automatically convert to 1 (True) or 0 (False) for cleaner arithmetic
+
+## Solutions
+- [`solution.py`](solution.py) - My Solution (python file)
+- [`solution_ai.py`](solution_ai.py) - Vibe coded using AI to refactor & optimize my solution (Sometimes not so optimized)
