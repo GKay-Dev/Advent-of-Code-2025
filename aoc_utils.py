@@ -20,7 +20,6 @@ def fetch_input(year, day):
     """Fetch input from Advent of Code website."""
     url = f"https://adventofcode.com/{year}/day/{day}/input"
     session_token = get_session_token()
-    # print(f"{url=}\n{session_token=}")
     
     headers = {"Cookie": f"session={session_token}"}
     response = requests.get(url, headers=headers)
@@ -28,7 +27,7 @@ def fetch_input(year, day):
     if response.status_code != 200:
         raise Exception(f"Failed to fetch input: {response.status_code}")
     
-    return response.text.strip()
+    return response.text
 
 
 def get_input(day, force_fetch=False, save_to_file=True):
