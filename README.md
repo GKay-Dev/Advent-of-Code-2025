@@ -158,7 +158,7 @@ run_all_days(no_of_days)  # Execute solutions for all days up to no_of_days
 | [Day 4](Day04/Day04_PrintingDepartment.md)   | ✅     | ✅     |
 | [Day 5](Day05/Day05_Cafeteria.md)            | ✅     | ✅     |
 | [Day 6](Day06/Day06_TrashCompactor.md)       | ✅     | ✅     |
-| Day 7                                        | ❌     | ❌     |
+| [Day 7](Day07/Day07_Laboratories.md)         | ✅     | ✅     |
 | Day 8                                        | ❌     | ❌     |
 | Day 9                                        | ❌     | ❌     |
 | Day 10                                       | ❌     | ❌     |
