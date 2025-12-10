@@ -161,7 +161,7 @@ run_all_days(no_of_days)  # Execute solutions for all days up to no_of_days
 | [Day 7](Day07/Day07_Laboratories.md)         | ✅     | ✅     |
 | [Day 8](Day08/Day08_Playground.md)           | ✅     | ✅     |
 | [Day 9](Day09/Day09_MovieTheater.md)         | ✅     | ✅     |
-| Day 10                                       | ❌     | ❌     |
+| [Day 10](Day10/Day10_Factory.md)             | ✅     | ✅     |
 | Day 11                                       | ❌     | ❌     |
 | Day 12                                       | ❌     | ❌     |
 
