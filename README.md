@@ -163,7 +163,7 @@ run_all_days(no_of_days)  # Execute solutions for all days up to no_of_days
 | [Day 9](Day09/Day09_MovieTheater.md)         | ✅     | ✅     |
 | [Day 10](Day10/Day10_Factory.md)             | ✅     | ✅     |
 | [Day 11](Day11/Day11_Reactor.md)             | ✅     | ✅     |
-| Day 12                                       | ❌     | ❌     |
+| [Day 12](Day12/Day12_ChristmasTreeFarm.md)   | ✅     | ✅     |
 
 ## Feedback
 Suggestions? Reach out via [GitHub Issues](https://github.com/GKay-dev/advent-of-code-2025/issues).
